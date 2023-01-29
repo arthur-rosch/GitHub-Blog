@@ -1,9 +1,9 @@
-import { } from './styles'
-
+import { ContainerHeader } from './styles'
+import bannerAndHeaderLogo from '../../assets/Cover.svg'
 export function Header() {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <ContainerHeader>
+      <img src={bannerAndHeaderLogo} alt="" />
+    </ContainerHeader>
   )
 }

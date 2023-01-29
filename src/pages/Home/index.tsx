@@ -1,9 +1,10 @@
+import { Summary } from '../../components/Summary'
 import { } from './styles'
 
 export function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Summary />
     </div>
   )
 }

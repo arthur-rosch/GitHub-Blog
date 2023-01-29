@@ -1,10 +1,10 @@
-import { Summary } from '../../components/Summary'
-import { } from './styles'
+import { SummaryUser } from '../../components/SummaryUser'
+import { ContainerHome } from './styles'
 
 export function Home() {
   return (
-    <div>
-      <Summary />
-    </div>
+    <ContainerHome>
+      <SummaryUser />
+    </ContainerHome>
   )
 }

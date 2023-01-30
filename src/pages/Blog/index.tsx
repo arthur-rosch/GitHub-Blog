@@ -2,14 +2,14 @@ import { CardProject } from './components/CardProject'
 import { SearchForm } from './components/SearchForm'
 import { SummaryUser } from './components/SummaryUser'
 import {
-  ContainerHome,
+  ContainerBlog,
   NumberOfPublications,
   ContainerCardProject,
 } from './styles'
 
-export function Home() {
+export function Blog() {
   return (
-    <ContainerHome>
+    <ContainerBlog>
       <SummaryUser />
       <div>
         <NumberOfPublications>
@@ -26,6 +26,6 @@ export function Home() {
           <CardProject />
         </ContainerCardProject>
       </div>
-    </ContainerHome>
+    </ContainerBlog>
   )
 }

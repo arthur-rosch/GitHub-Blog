@@ -41,17 +41,20 @@ export const NameAndLinkGitHub = styled.div`
 
     color: ${(props) => props.theme['base-title']};
   }
-  a {
+  div {
     margin-right: 2rem;
 
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 160%;
+    a {
+      margin-right: 0.5rem;
 
-    text-decoration: none;
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 160%;
 
-    color: ${(props) => props.theme.blue};
+      text-decoration: none;
 
+      color: ${(props) => props.theme.blue};
+    }
     &:hover {
       border-top: 1px solid transparent;
       border-bottom: 1px solid ${(props) => props.theme.blue};
@@ -74,10 +77,16 @@ export const InformationUser = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   color: ${(props) => props.theme['base-subtitle']};
   span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
     font-size: 1rem;
     font-weight: 400;
     line-height: 160%;

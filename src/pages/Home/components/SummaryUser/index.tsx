@@ -5,6 +5,7 @@ import {
   Description,
   InformationUser,
 } from './styles'
+import { ArrowSquareOut, GithubLogo, House, Users } from 'phosphor-react'
 
 export function SummaryUser() {
   return (
@@ -16,7 +17,10 @@ export function SummaryUser() {
       <ContentUser>
         <NameAndLinkGitHub>
           <h1>Arthur Rosch</h1>
-          <a href="">GITHUB</a>
+          <div>
+            <a href="">GITHUB</a>
+            <ArrowSquareOut size={11.25} color="#3294F8" weight="fill" />
+          </div>
         </NameAndLinkGitHub>
         <Description>
           <p>
@@ -26,11 +30,19 @@ export function SummaryUser() {
           </p>
         </Description>
         <InformationUser>
-          <span>arthur-rosch</span>
+          <span>
+            <GithubLogo size={18} color="#3A536B" weight="fill" />
+            arthur-rosch
+          </span>
 
-          <span>Raion</span>
+          <span>
+            <House size={18} color="#3A536B" weight="fill" />
+            Raion
+          </span>
 
-          <span>32 Seguidores</span>
+          <span>
+            <Users size={18} color="#3A536B" weight="fill" /> 32 Seguidores
+          </span>
         </InformationUser>
       </ContentUser>
     </ContainerSummaryUser>

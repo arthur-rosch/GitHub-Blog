@@ -1,6 +1,7 @@
-import { CardProject } from './components/CardProject'
 import { SearchForm } from './components/SearchForm'
-import { SummaryUser } from './components/SummaryUser'
+import { CardProject } from './components/CardProject'
+import { CardInformation } from '../../components/CardInformation'
+
 import {
   ContainerBlog,
   NumberOfPublications,
@@ -10,7 +11,8 @@ import {
 export function Blog() {
   return (
     <ContainerBlog>
-      <SummaryUser />
+      <CardInformation cardInformationUser={true} />
+
       <div>
         <NumberOfPublications>
           <p>Publicação</p>

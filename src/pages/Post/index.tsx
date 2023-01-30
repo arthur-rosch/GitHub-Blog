@@ -1,9 +1,10 @@
-import { PostInfo } from './components/PostInfo'
 import { ContainerPost } from './styles'
+import { CardInformation } from '../../components/CardInformation'
+
 export function Post() {
   return (
     <ContainerPost>
-      <PostInfo />
+      <CardInformation cardInformationUser={false} />
     </ContainerPost>
   )
 }

@@ -27,3 +27,8 @@ export const NumberOfPublications = styled.div`
     font-size: 0.875rem;
   }
 `
+
+export const ContainerCardProject = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`

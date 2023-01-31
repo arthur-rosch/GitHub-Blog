@@ -22,39 +22,32 @@ import {
 } from 'phosphor-react'
 
 interface CardInformationProps {
-  gitHubUser?: string
+  gitHubUser: string
 
-  cardInformationUser: boolean
-  name?: string
-  urlGithub?: string
-  urlPhotoUser?: string
-  description?: string
-  workCompany?: string
-  followers?: string | number
-
-  repoName?: string
-  createdAt?: string
-  comments?: string
-  urlRepoGithub?: string
+  informationRepo?: {
+    repoName: string
+    createdAt: string
+    comments: string
+    urlRepoGithub: string
+  }
+  informationUser?: {
+    name: string
+    urlGithub: string
+    urlPhotoUser: string
+    description: string
+    workCompany: string
+    followers: string | number
+  }
 }
 
 export function CardInformation({
   gitHubUser,
-  cardInformationUser,
-  name,
-  urlGithub,
-  urlPhotoUser,
-  description,
-  workCompany,
-  followers,
-  repoName,
-  createdAt,
-  comments,
-  urlRepoGithub,
+  informationRepo,
+  informationUser,
 }: CardInformationProps) {
   return (
     <ContainerCardInformation>
-      {cardInformationUser === true ? (
+      {informationUser ? (
         <ContainerUser>
           <img
             src="https://avatars.githubusercontent.com/u/65727437?s=400&u=605b5909d02365bc042bfda2b76f60abee98a792&v=4"

@@ -11,7 +11,17 @@ import {
 export function Blog() {
   return (
     <ContainerBlog>
-      <CardInformation cardInformationUser={true} />
+      <CardInformation
+        gitHubUser="arthur-rosch"
+        informationUser={{
+          followers: 1,
+          name: 'sadasdas',
+          workCompany: 'asdasdas',
+          description: 'sdsfsdf',
+          urlGithub: 'sadasdasd',
+          urlPhotoUser: 'asdasdas',
+        }}
+      />
 
       <div>
         <NumberOfPublications>

@@ -21,7 +21,7 @@ export const ContainerUser = styled(ContainerBase)`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   img {
     width: 9.25rem;

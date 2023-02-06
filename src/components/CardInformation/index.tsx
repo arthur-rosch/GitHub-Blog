@@ -31,12 +31,13 @@ interface CardInformationProps {
     urlRepoGithub: string
   }
   informationUser?: {
+    followers: number
     name: string
-    urlGithub: string
-    urlPhotoUser: string
-    description: string
-    workCompany: string
-    followers: string | number
+    company: string | null
+    html_url: string
+    avatar_url: string
+    bio: string | null
+    login: string
   }
 }
 
@@ -55,33 +56,30 @@ export function CardInformation({
           />
           <ContentUser>
             <HeaderUser>
-              <Titles>Arthur Rosch</Titles>
+              <Titles>{informationUser.name}</Titles>
 
-              <a href="">
+              <a href={informationUser.html_url}>
                 GITHUB
                 <ArrowSquareOut size={11.25} color="#3294F8" weight="fill" />
               </a>
             </HeaderUser>
             <Description>
-              <p>
-                Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-                viverra massa quam dignissim aenean malesuada suscipit. Nunc,
-                volutpat pulvinar vel mass.
-              </p>
+              <p>{informationUser.bio}</p>
             </Description>
             <InformationUser>
               <span>
                 <GithubLogo size={18} color="#3A536B" weight="fill" />
-                arthur-rosch
+                {informationUser.login}
               </span>
 
               <span>
                 <House size={18} color="#3A536B" weight="fill" />
-                Raion
+                {informationUser.company}
               </span>
 
               <span>
-                <Users size={18} color="#3A536B" weight="fill" /> 32 Seguidores
+                <Users size={18} color="#3A536B" weight="fill" />{' '}
+                {informationUser.followers} Seguidores
               </span>
             </InformationUser>
           </ContentUser>

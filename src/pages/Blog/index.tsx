@@ -7,19 +7,23 @@ import {
   NumberOfPublications,
   ContainerCardProject,
 } from './styles'
+import { useContext } from 'react'
+import { GitHubContext } from '../../context/GitHubContext'
 
 export function Blog() {
+  const { user } = useContext(GitHubContext)
   return (
     <ContainerBlog>
       <CardInformation
         gitHubUser="arthur-rosch"
         informationUser={{
-          followers: 1,
-          name: 'sadasdas',
-          workCompany: 'asdasdas',
-          description: 'sdsfsdf',
-          urlGithub: 'sadasdasd',
-          urlPhotoUser: 'asdasdas',
+          followers: user.followers,
+          name: user.name,
+          company: user.company,
+          bio: user.bio,
+          html_url: user?.html_url,
+          avatar_url: user?.avatar_url,
+          login: user.login,
         }}
       />
 
